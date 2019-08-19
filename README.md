@@ -14,7 +14,8 @@ The #2 sports team management app that makes communication and organization a br
 * [Bootstrap](https://getbootstrap.com/) (for styling the front-end components)
 * [jQuery](https://jquery.com/) and [Popper](https://popper.js.org/) (for working with Bootstrap)
 * Webpacker
-* Yarn (yarn installs frontend dependencies and manages then in package.json)
+* yarn (yarn installs frontend dependencies and manages then in package.json)\
+* bundle (bundle update/install for gem updates)
 
 # Routes
 
