@@ -1,24 +1,58 @@
-# README
+# squadsnap2
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The #2 sports team management app that makes communication and organization a breeze.
 
-Things you may want to cover:
+# Technologies
 
-* Ruby version
+* ruby 2.6.0p0 (2018-12-25 revision 66547) [x86_64-linux]
+* rails 6.0.0
+* PostgresQL
+* React
+* [React Router](https://reacttraining.com/react-router/) (for handling navigattion in a React application)
+* [Bootstrap](https://getbootstrap.com/) (for styling the front-end components)
+* [jQuery](https://jquery.com/) and [Popper](https://popper.js.org/) (for working with Bootstrap)
+* Webpacker
+* Yarn (yarn installs frontend dependencies and manages then in package.json)
 
-* System dependencies
+# Routes
 
-* Configuration
+# API
 
-* Database creation
+# Models
 
-* Database initialization
+* **recipes**
+* **User**
+  * `id`
+  * `firstName`
+  * `lastName`
+  * `email`
+  * `password`
+  * `access` - admin, full, lite, ghost - _not yet implemented_
+* **Member**
+  * `squad` id
+  * `user` id
+  * `membership` - owner, member, request, _ghost_
+* **Squad**
+  * `name`
+  * `sport`
+  * `owner_id` - user.id of the owner
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Associations
+* **User**
+  *  `has_many :members`
+  *  `has_many :squads`, `through: :members`
+* **Member**
+  * `belongs_to` `:user`
+  * `belongs_to` `:squad`
+* **Squad**
+  * `has_many :members`, `:dependent => :delete_all`
+  * `has_many :users`, `through: :members`
 
-* Deployment instructions
+# Testing
 
-* ...
+* No testing at this time
+
+# Other Notes
+
+* Reference the older squadsnap wiki [here](https://github.com/weteamsteve/squadsnap/wiki)
