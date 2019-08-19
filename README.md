@@ -1,3 +1,5 @@
+![squadsnap logo][logo]
+
 # squadsnap2
 
 The #2 sports team management app that makes communication and organization a breeze.
@@ -56,3 +58,5 @@ The #2 sports team management app that makes communication and organization a br
 # Other Notes
 
 * Reference the older squadsnap wiki [here](https://github.com/weteamsteve/squadsnap/wiki)
+
+[logo]: http://weteamsteve.com/wp-content/uploads/2019/06/squadsnap_smaller.png "squadsnap logo"
