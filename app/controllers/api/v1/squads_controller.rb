@@ -36,6 +36,10 @@ class Api::V1::SquadsController < ApplicationController
     params.permit(:name, :sport, :owner_id)
   end
 
+  def squad
+    @squad ||= Squad.find(params[:id])
+  end
+
   def create_membership
     member = Member.new(squad: @squad, user: current_user, membership: 'owner')
     member.save(validate: true)

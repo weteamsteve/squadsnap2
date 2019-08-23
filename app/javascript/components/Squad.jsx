@@ -4,7 +4,13 @@ import { Link } from "react-router-dom";
 class Squad extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { squad: { name: "", sport: "", owner_id: "" } };
+    this.state = {
+      squad: {
+        name: "",
+        sport: "",
+        owner_id: ""
+      }
+    };
     this.addHtmlEntities = this.addHtmlEntities.bind(this);
     this.deleteSquad = this.deleteSquad.bind(this);
   }
