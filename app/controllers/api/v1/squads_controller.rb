@@ -18,7 +18,8 @@ class Api::V1::SquadsController < ApplicationController
     #@members = Member.where(squad: squad)
 
     if squad
-      render json: squad
+      #render json: squad
+      # Commenting this out allows us to use the jbuilder files
     else
       render json: squad.errors
     end

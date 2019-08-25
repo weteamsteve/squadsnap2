@@ -73,19 +73,17 @@ class Squad extends React.Component {
     const { squad } = this.state;
     let memberList = "The squad is empty.";
 
-    console.log ("!!! squad: " + squad)
-    console.log ("!!! squad members: " + squad.members)
-    {/*
+    console.log ("squad: " + JSON.stringify(squad))
+    {/* console.log ("squad members: " + JSON.stringify(squad.members)) */}
+
     if (squad.members.length > 0) {
       memberList = squad.members
-        .split(",")
         .map((member, index) => (
           <li key={index} className="list-group-item">
             {member.user.name} {member.membership}
           </li>
         ));
     }
-    */}
 
     const sport = this.addHtmlEntities(squad.sport);
     const owner_id = this.addHtmlEntities(squad.owner_id);
