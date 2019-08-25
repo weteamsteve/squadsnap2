@@ -25,11 +25,13 @@ class Squads extends React.Component {
     const { squads } = this.state;
     const allSquads = squads.map((squad, index) => (
       <div key={index} className="col-md-6 col-lg-4">
+        <center>
         <div className="card mb-4">
           <img
-            src={squad.image}
+            src="http://weteamsteve.com/wp-content/uploads/2019/08/icons8-basketball-64.png"
             className="card-img-top"
             alt={`${squad.name} image`}
+            style={{ height: 64, width: 64 }}
           />
           <div className="card-body">
             <h5 className="card-title">{squad.name}</h5>
@@ -38,6 +40,7 @@ class Squads extends React.Component {
             </Link>
           </div>
         </div>
+        </center>
       </div>
     ));
     const noSquad = (
@@ -62,17 +65,19 @@ class Squads extends React.Component {
         </section>
         <div className="py-5">
           <main className="container">
-            <div className="text-right mb-3">
+            <div className="btn-toolbar">
+              <Link to="/" className="btn custom-button">
+                Home
+              </Link>
               <Link to="/squad" className="btn custom-button">
                 Create New Squad
               </Link>
             </div>
+            <br />
             <div className="row">
               {squads.length > 0 ? allSquads : noSquad}
             </div>
-            <Link to="/" className="btn btn-link">
-              Home
-            </Link>
+
           </main>
         </div>
       </>

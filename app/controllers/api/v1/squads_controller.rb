@@ -15,6 +15,8 @@ class Api::V1::SquadsController < ApplicationController
   end
 
   def show
+    #@members = Member.where(squad: squad)
+
     if squad
       render json: squad
     else

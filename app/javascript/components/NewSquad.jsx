@@ -89,21 +89,25 @@ class NewSquad extends React.Component {
                   onChange={this.onChange}
                 />
               </div>
-              <label htmlFor="owner_id">Owner</label>
-              <textarea
-                className="form-control"
-                id="owner_id"
-                name="owner_id"
-                rows="1"
-                required
-                onChange={this.onChange}
-              />
-              <button type="submit" className="btn custom-button mt-3">
-                Create Squad
-              </button>
-              <Link to="/squads" className="btn btn-link mt-3">
-                Back to squads
-              </Link>
+              <div className="form-group">
+                <label htmlFor="owner_id">Owner</label>
+                <input
+                  type="text"
+                  name="owner_id"
+                  id="owner_id"
+                  className="form-control"
+                  required
+                  onChange={this.onChange}
+                />
+              </div>
+              <div className="btn-toolbar">
+                <button type="submit" className="btn custom-button mt-3">
+                  Create Squad
+                </button>
+                <Link to="/squads" className="btn custom-button mt-3">
+                  Back to Squads
+                </Link>
+              </div>
             </form>
           </div>
         </div>

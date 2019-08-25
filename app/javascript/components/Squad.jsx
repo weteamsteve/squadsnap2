@@ -8,7 +8,8 @@ class Squad extends React.Component {
       squad: {
         name: "",
         sport: "",
-        owner_id: ""
+        owner_id: "",
+        members: ""
       }
     };
     this.addHtmlEntities = this.addHtmlEntities.bind(this);
@@ -33,6 +34,7 @@ class Squad extends React.Component {
       })
       .then(response => this.setState({ squad: response }))
       .catch(() => this.props.history.push("/squads"));
+
   }
 
   addHtmlEntities(str) {
@@ -70,17 +72,21 @@ class Squad extends React.Component {
   render() {
     const { squad } = this.state;
     let memberList = "The squad is empty.";
+
+    console.log ("!!! squad: " + squad)
+    console.log ("!!! squad members: " + squad.members)
     {/*
     if (squad.members.length > 0) {
-      memberList = squad.members     this doesn't work, will need logic to query @members = Member.where(squad: @squad)
+      memberList = squad.members
         .split(",")
-        .map((members, index) => (
+        .map((member, index) => (
           <li key={index} className="list-group-item">
             {member.user.name} {member.membership}
           </li>
         ));
     }
     */}
+
     const sport = this.addHtmlEntities(squad.sport);
     const owner_id = this.addHtmlEntities(squad.owner_id);
 
