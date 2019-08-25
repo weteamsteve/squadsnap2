@@ -101,40 +101,45 @@ class Squad extends React.Component {
             {squad.name}
           </h1>
         </div>
+        {/* Squad Image and Name Ends Here */}
         <div className="container py-5">
-          <div className="row">
-            <div className="col-sm-12 col-lg-3">
-              <ul className="list-group">
-                <h5 className="mb-2">Members</h5>
-                {memberList}
-              </ul>
-            </div>
-            <div className="col-sm-12 col-lg-7">
-              <h5 className="mb-2">Sport</h5>
+          <div className="col">
+            <div className="row">
+              <b>Sport: </b>
               <div
                 dangerouslySetInnerHTML={{
                   __html: `${sport}`
                 }}
               />
-            </div>
-            <div className="col-sm-12 col-lg-7">
-              <h5 className="mb-2">Owner</h5>
+            </div> {/* end row */}
+            <div className="row">
+              <b>Owner: </b>
               <div
                 dangerouslySetInnerHTML={{
                   __html: `${owner_id}`
                 }}
               />
-            </div>
-            <div className="col-sm-12 col-lg-2">
-              <button type="button" className="btn btn-danger" onClick={this.deleteSquad}>
-                Delete Squad
-              </button>
-            </div>
+            </div> {/* end row */}
+            <div className="row">
+              <ul className="list-group">
+                <h5><b>Members: </b></h5>
+                {memberList}
+              </ul>
+            </div> {/* end row */}
+          </div> {/* end col */}
+
+          {/* Bottom Links Begin Here*/}
+          <br />
+          <br />
+          <div className="btn-toolbar">
+            <Link to="/squads" className="btn custom-button">
+              Back to Squads
+            </Link>
+            <button type="button" className="btn btn-danger" onClick={this.deleteSquad}>
+              Delete Squad
+            </button>
           </div>
-          <Link to="/squads" className="btn btn-link">
-            Back to squads
-          </Link>
-        </div>
+        </div> {/* end container py-5 */}
       </div>
     );
   }

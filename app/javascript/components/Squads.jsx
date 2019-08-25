@@ -34,7 +34,9 @@ class Squads extends React.Component {
             style={{ height: 64, width: 64 }}
           />
           <div className="card-body">
-            <h5 className="card-title">{squad.name}</h5>
+            <h5 className="card-title"><b>{squad.name}</b></h5>
+            <h5><b>Sport:</b> {squad.sport}</h5>
+            <h5><b>Owner:</b> {squad.owner_id}</h5>
             <Link to={`/squad/${squad.id}`} className="btn custom-button">
               View Squad
             </Link>
