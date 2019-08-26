@@ -19,6 +19,9 @@ p {
     background-color: #00b3db;
     border-color: #285e8e;
 }
+.card:after {
+  background-color: #3f4c6b;
+}
 
 /* hero image and overlay */
 .hero {

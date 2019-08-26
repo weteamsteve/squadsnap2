@@ -26,7 +26,7 @@ class Squads extends React.Component {
     const allSquads = squads.map((squad, index) => (
       <div key={index} className="col-md-6 col-lg-4">
         <center>
-        <div className="card mb-4">
+        <div className="card bg-dark text-white mb-4">
             <img
               src="http://weteamsteve.com/wp-content/uploads/2019/08/icons8-basketball-64.png"
               className="card-img-top"
@@ -55,7 +55,7 @@ class Squads extends React.Component {
 
     return (
       <>
-        <div className="jumbotron jumbotron-fluid text-center bg-dark text-white">
+        <div className="jumbotron jumbotron-fluid bg-transparent">
           <div className="container py-5">
             <img
                 src="https://camo.githubusercontent.com/ef0e74c973c2ef9f5045c359a1a4f3ec1b3b4d71/687474703a2f2f77657465616d73746576652e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031392f30362f7371756164736e61705f736d616c6c65722e706e67"
@@ -64,14 +64,14 @@ class Squads extends React.Component {
               />
             <br />
             <br />
-            <p className="lead text-muted">
+            <p>
               The leading solution for sports and activity management.
             </p>
-            <p className="lead text-muted">
+            <p>
               Coaches, managers and admins rely on Squadsnap's simple and connected solutions to organize every season
             </p>
-          </div>
-        </div>
+          </div> {/* container */}
+        </div> {/* jumbotron */}
         <div className="py-5">
           <main className="container">
             <div className="btn-toolbar d-flex justify-content-center">
