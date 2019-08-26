@@ -1,24 +1,26 @@
-.bg_primary-color {
-  background-color: #FFFFFF;
+/* background gradient, ash at https://uigradients.com/#Ash */
+body {
+  background-image: linear-gradient(to right, #606c88, #3f4c6b);
 }
-.primary-color {
-  background-color: #FFFFFF;
+/* text color */
+p {
+  color: #fff
 }
-.bg_secondary-color {
-  background-color: #293241;
+
+
+/* buttons */
+.btn-primary {
+    color: #fff;
+    background-color: #0495c9;
+    border-color: #357ebd;
 }
-.secondary-color {
-  color: #293241;
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #00b3db;
+    border-color: #285e8e;
 }
-.custom-button.btn {
-  background-color: #293241;
-  color: #FFF;
-  border: none;
-}
-.custom-button.btn:hover {
-  color: #FFF !important;
-  border: none;
-}
+
+/* hero image and overlay */
 .hero {
   width: 100vw;
   height: 50vh;
@@ -33,4 +35,15 @@
   height: 100%;
   width: 100%;
   opacity: 0.4;
+}
+
+/* home page */
+.primary-color {
+  background-color: #FFFFFF;
+}
+.bg_secondary-color {
+  background-color: #293241;
+}
+.secondary-color {
+  color: #293241;
 }
