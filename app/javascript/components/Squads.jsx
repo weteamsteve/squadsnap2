@@ -48,7 +48,7 @@ class Squads extends React.Component {
     const noSquad = (
       <div className="vw-100 vh-50 d-flex align-items-center justify-content-center">
         <h4>
-          No squads yet. Why not <Link to="/new_squad">create one</Link>
+          No squads yet. Why not <Link to="/new_squad">create one</Link>?
         </h4>
       </div>
     );
@@ -57,17 +57,24 @@ class Squads extends React.Component {
       <>
         <section className="jumbotron jumbotron-fluid text-center">
           <div className="container py-5">
-            <h1 className="display-4">Squads for every occasion</h1>
+            <img
+                src="https://camo.githubusercontent.com/ef0e74c973c2ef9f5045c359a1a4f3ec1b3b4d71/687474703a2f2f77657465616d73746576652e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031392f30362f7371756164736e61705f736d616c6c65722e706e67"
+                alt={`squadsnap logo`}
+                className="img-rounded center-block"
+              />
+            <br />
+            <br />
             <p className="lead text-muted">
-              We’ve pulled together our most popular squads, our latest
-              additions, and our editor’s picks, so there’s sure to be something
-              tempting for you to try.
+              The leading solution for sports and activity management.
+            </p>
+            <p className="lead text-muted">
+              Coaches, managers and admins rely on Squadsnap's simple and connected solutions to organize every season
             </p>
           </div>
         </section>
         <div className="py-5">
           <main className="container">
-            <div className="btn-toolbar">
+            <div className="btn-toolbar d-flex justify-content-center">
               <Link to="/" className="btn custom-button">
                 Home
               </Link>

@@ -92,7 +92,7 @@ class Squad extends React.Component {
       <div className="">
         <div className="hero position-relative d-flex align-items-center justify-content-center">
           <img
-            src={squad.image}
+            src="https://purpleeagles.com/images/2019/8/21/mbb.jpg?width=1416&height=797&mode=crop&format=jpg&quality=80"
             alt={`${squad.name} image`}
             className="img-fluid position-absolute"
           />
