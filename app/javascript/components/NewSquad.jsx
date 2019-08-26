@@ -101,10 +101,10 @@ class NewSquad extends React.Component {
                 />
               </div>
               <div className="btn-toolbar">
-                <button type="submit" className="btn custom-button mt-3">
+                <button type="submit" className="btn btn-primary mt-3">
                   Create Squad
                 </button>
-                <Link to="/squads" className="btn custom-button mt-3">
+                <Link to="/squads" className="btn btn-primary mt-3">
                   Back to Squads
                 </Link>
               </div>

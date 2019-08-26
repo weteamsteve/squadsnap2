@@ -132,7 +132,7 @@ class Squad extends React.Component {
           <br />
           <br />
           <div className="btn-toolbar">
-            <Link to="/squads" className="btn custom-button">
+            <Link to="/squads" className="btn btn-primary">
               Back to Squads
             </Link>
             <button type="button" className="btn btn-danger" onClick={this.deleteSquad}>
