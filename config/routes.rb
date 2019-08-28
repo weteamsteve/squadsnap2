@@ -13,6 +13,8 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'users/check_for_user', to: 'users#check_for_user'
+
   root 'homepage#index'
   get '/*path' => 'homepage#index'
   # Catch all route with get '/*path' that will direct any other request
