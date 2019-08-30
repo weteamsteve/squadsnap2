@@ -37,3 +37,5 @@ render() {
     }
   }
 }
+
+export default Header;

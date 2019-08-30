@@ -25,3 +25,5 @@ render() {
     );
   };
 }
+
+export default Logout;

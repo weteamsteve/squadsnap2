@@ -39,3 +39,5 @@ render() {
     );
   };
 };
+
+export default Signup;
