@@ -3,11 +3,15 @@ body {
   background-image: linear-gradient(to right, #606c88, #3f4c6b);
 }
 /* text color */
-p {
-  color: #fff
+span {
+  color: #fff;
 }
 
 
+
+.container {
+  text-align: center;
+}
 /* buttons */
 .btn-primary {
     color: #fff;
