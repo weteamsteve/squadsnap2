@@ -18,13 +18,14 @@ constructor(props){
         page: "delete"
       }
     }
+    console.log("header page: " + this.state.page)
     this.changePage = this.changePage.bind(this);
   }
 changePage(newPage) {
     this.setState({
       page: newPage
     })
-    console.log("header changepage")
+    console.log("header changepage to " + newPage)
   }
 render() {
     switch(this.state.page) {

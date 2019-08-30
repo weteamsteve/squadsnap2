@@ -1,6 +1,8 @@
 import React from "react";
 import Routes from "../routes/Index";
 
+import axios from 'axios';
+
 class Login extends React.Component {
   constructor(props){
     super(props);
@@ -9,7 +11,9 @@ class Login extends React.Component {
 handleLogin(e) {
     e.preventDefault();
     let that = this
-    axios.post('/users', {
+    let email
+
+    axios.post('/users/sign_in', {
       user: {
         email: document.getElementById("email").value,
         password: document.getElementById("password").value,
@@ -17,6 +21,7 @@ handleLogin(e) {
       }
     })
     .then(function(response){
+      email = document.getElementById("email").value;
       that.props.changePage("delete");
       that.props.updateCurrentUser(email);
     })

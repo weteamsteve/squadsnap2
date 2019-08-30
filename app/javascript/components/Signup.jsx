@@ -1,6 +1,8 @@
 import React from "react";
 import Routes from "../routes/Index";
 
+import axios from 'axios';
+
 class Signup extends React.Component {
   constructor(props){
     super(props);
@@ -9,6 +11,8 @@ class Signup extends React.Component {
 handleSignup(e) {
     e.preventDefault();
     let that = this
+    let email
+
     axios.post('/users', {
       user: {
         email: document.getElementById("email").value,
@@ -17,6 +21,7 @@ handleSignup(e) {
       }
     })
     .then(function(response){
+      email = document.getElementById("email").value;
       that.props.changePage("delete");
       that.props.updateCurrentUser(email);
     })

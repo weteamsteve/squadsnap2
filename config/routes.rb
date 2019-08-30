@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users#, defaults: {format: 'json'}
   namespace :api, defaults: {format: 'json'} do
     namespace :v1 do
       get 'squads/index'
@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   end
 
   get 'users/check_for_user', to: 'users#check_for_user'
+  #delete '/', to: 'users#sign_out'
 
   root 'homepage#index'
   get '/*path' => 'homepage#index'
