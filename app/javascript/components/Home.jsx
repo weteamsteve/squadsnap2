@@ -65,9 +65,9 @@ render(){
             >
               View Squads
             </Link>
-            <span align="center">
+            {/*<span align="center">
               <Header updateCurrentUser={this.updateCurrentUser}/>
-            </span>
+            </span>*/}
           </div> {/* container end*/}
         </div>
       </div>

@@ -62,18 +62,17 @@ class Squads extends React.Component {
                 alt={`squadsnap logo`}
                 className="img-rounded center-block"
               />
-            <br />
-            <br />
-            <p>
-              The leading solution for sports and activity management.
-            </p>
-            <p>
+            <span>
+              The leading solution for sports and activity management.<br /><br />
+            </span>
+            <span>
               Coaches, managers and admins rely on Squadsnap's simple and connected solutions to organize every season
-            </p>
+            </span>
           </div> {/* container */}
         </div> {/* jumbotron */}
         <div className="py-5">
           <main className="container">
+            <br />
             <div className="btn-toolbar d-flex justify-content-center">
               <Link to="/" className="btn btn-primary">
                 Home
@@ -86,7 +85,6 @@ class Squads extends React.Component {
             <div className="row">
               {squads.length > 0 ? allSquads : noSquad}
             </div>
-
           </main>
         </div>
       </>
