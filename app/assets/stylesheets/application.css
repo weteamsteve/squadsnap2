@@ -11,8 +11,12 @@ span {
 
 .container {
   text-align: center;
+  border:1px solid red;
 }
 /* buttons */
+.btn-toolbar {
+  border:1px solid red;
+}
 .btn-primary {
     color: #fff;
     background-color: #0495c9;
