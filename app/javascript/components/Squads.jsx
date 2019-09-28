@@ -16,7 +16,7 @@ class Squads extends React.Component {
         if (response.ok) {
           return response.json();
         }
-        throw new Error("Network response was not ok.");
+        throw new Error("Network response was not ok when fetching squads.");
       })
       .then(response => this.setState({ squads: response }))
       .catch(() => this.props.history.push("/"));
@@ -62,6 +62,7 @@ class Squads extends React.Component {
                 alt={`squadsnap logo`}
                 className="img-rounded center-block"
               />
+            <br />
             <span>
               The leading solution for sports and activity management.<br /><br />
             </span>
