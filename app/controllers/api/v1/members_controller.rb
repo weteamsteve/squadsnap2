@@ -1,4 +1,4 @@
-class Api::V1::MembersController < ApplicationController
+class Api::V1::MembersController < ::ApiController
   def index
     member = Member.all.order(created_at: :desc)
     render json: member

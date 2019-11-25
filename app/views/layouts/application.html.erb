@@ -4,6 +4,9 @@
     <title>Squadsnap2</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <% if user_signed_in? %>
+    <input type="hidden" name="user_auth_token" value="<%= current_user.authentication_token %>">
+    <% end %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>

@@ -11,7 +11,13 @@ class Squads extends React.Component {
 
   componentDidMount() {
     const url = "/api/v1/squads/index";
-    fetch(url)
+    const authToken = document.querySelector('input[name="user_auth_token"]').content;
+
+    fetch(url, {
+      body: JSON.stringify({
+        "user_token": authToken,
+      })
+    })
       .then(response => {
         if (response.ok) {
           return response.json();

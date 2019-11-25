@@ -1,7 +1,7 @@
-class Api::V1::SquadsController < ApplicationController
+class Api::V1::SquadsController < ::ApiController
   def index
-    squad = Squad.all.order(created_at: :desc)
-    render json: squad
+    @squad = Squad.all.order(created_at: :desc)
+    render json: @squad
   end
 
   def create

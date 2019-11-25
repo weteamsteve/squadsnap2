@@ -21,7 +21,6 @@ default: &default
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   host: localhost
-  username: squadsnap2
   password: <%= ENV['SQUADSNAP2_DATABASE_PASSWORD'] %>
 
 development:
